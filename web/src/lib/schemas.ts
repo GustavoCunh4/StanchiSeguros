@@ -20,10 +20,8 @@ export const leadSchema = z.object({
     .max(600, "Mensagem muito longa")
     .optional()
     .default(""),
-  consent: z.literal(true, {
-    errorMap: () => ({
-      message: "É necessário aceitar o tratamento dos dados",
-    }),
+  consent: z.boolean().refine((value) => value, {
+    message: "É necessário aceitar o tratamento dos dados",
   }),
 });
 
