@@ -1,8 +1,8 @@
-import type { HTMLAttributes } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import type { HTMLMotionProps } from "framer-motion";
 import { clsx } from "clsx";
 
-type MotionFadeProps = HTMLAttributes<HTMLDivElement> & {
+type MotionFadeProps = HTMLMotionProps<"div"> & {
   delay?: number;
 };
 
