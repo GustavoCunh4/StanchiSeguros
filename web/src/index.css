@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --brand-primary: #156b86;
+    --brand-accent: #f25b00;
+    --brand-surface: #f4f8fc;
+    --brand-dark: #0b2c36;
+  }
+
+  html {
+    font-size: 16px;
+    @apply scroll-smooth bg-brand-surface text-brand-dark;
+  }
+
+  body {
+    @apply font-body antialiased text-base leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading tracking-tight text-brand-dark;
+  }
+
+  a {
+    @apply transition-colors duration-150 ease-out;
+  }
+
+  ::selection {
+    @apply bg-brand-light text-brand-dark;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-offset-2 ring-brand-accent ring-offset-white;
+  }
+}
+
+@layer components {
+  .container-section {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:max-w-6xl lg:px-8;
+  }
+
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.3em] text-brand-primary;
+  }
+
+  .section-title {
+    @apply text-[32px] font-semibold leading-tight text-brand-dark sm:text-[38px];
+  }
+
+  .section-subtitle {
+    @apply mt-3 text-base leading-relaxed text-brand-slate/80;
+  }
+
+  .focus-outline {
+    @apply focus-visible:ring-2 focus-visible:ring-brand-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+
+  .bg-hero-orbit {
+    background-image:
+      radial-gradient(80% 140% at 0% 0%, rgba(92, 211, 215, 0.28), transparent 65%),
+      radial-gradient(70% 120% at 100% 10%, rgba(21, 107, 134, 0.25), transparent 60%),
+      radial-gradient(60% 80% at 60% 90%, rgba(242, 91, 0, 0.16), transparent 70%),
+      linear-gradient(135deg, rgba(10, 42, 54, 0.08), transparent 60%);
+  }
+
+  .bg-section-mint {
+    background-image:
+      linear-gradient(135deg, rgba(92, 211, 215, 0.18), rgba(21, 107, 134, 0.08)),
+      radial-gradient(90% 70% at 90% 10%, rgba(173, 231, 233, 0.45), transparent 70%);
+  }
+
+  .bg-section-peach {
+    background-image:
+      linear-gradient(135deg, rgba(242, 91, 0, 0.2), rgba(21, 107, 134, 0.08)),
+      radial-gradient(90% 70% at 10% 0%, rgba(242, 98, 0, 0.2), transparent 65%);
+  }
+
+  .bg-section-cream {
+    background-image:
+      linear-gradient(150deg, rgba(255, 255, 255, 0.92), rgba(21, 107, 134, 0.08)),
+      radial-gradient(120% 120% at 10% 0%, rgba(173, 231, 233, 0.5), transparent 65%);
+  }
+
+  .bg-brand-sheen {
+    background-image: linear-gradient(135deg, rgba(21, 107, 134, 0.16), rgba(92, 211, 215, 0.1));
+  }
+
+  .bg-accent-sheen {
+    background-image: linear-gradient(135deg, rgba(242, 91, 0, 0.22), rgba(21, 107, 134, 0.1));
+  }
+
+  .card-soft {
+    @apply rounded-2xl border border-brand-dark/10 bg-white shadow-sm;
+  }
+
+  .shadow-lift {
+    box-shadow: 0 18px 42px -26px rgba(21, 107, 134, 0.35);
+  }
+
+  .ring-primary-soft {
+    box-shadow: 0 0 0 1px rgba(21, 107, 134, 0.18);
+  }
+
+  .marquee-track {
+    @apply flex w-max items-center animate-marquee motion-reduce:animate-none;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+  }
+
+  .marquee-group {
+    @apply flex items-center gap-4 pr-4;
+  }
+}
