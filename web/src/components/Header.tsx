@@ -20,51 +20,46 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header
-      id="topo"
-      className="sticky top-0 z-50 w-full border-b border-brand-dark/10 bg-brand-surface/95 shadow-sm backdrop-blur supports-[backdrop-filter]:backdrop-blur-xl"
-    >
-      <div className="container-section flex items-center justify-between gap-4 py-3 md:py-4">
-        <a
-          href="#topo"
-          className="flex items-center gap-2"
-          aria-label="Ir para o topo"
-        >
-          <StanchiLogo className="h-10 w-auto" />
-        </a>
-
-        <nav className="hidden items-center gap-6 text-sm font-semibold text-brand-dark/90 lg:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="rounded-full px-3 py-1.5 transition-colors hover:text-brand-primary focus-visible:text-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/40"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noreferrer"
-            className="hidden items-center gap-2 whitespace-nowrap rounded-full bg-[#1EB457] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1AA34E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1EB457]/50 md:inline-flex"
-          >
-            <WhatsappLogo size={18} weight="fill" />
-            Falar com especialista
+    <header id="topo" className="fixed top-0 z-50 w-full bg-transparent">
+      <div className="container-section py-3">
+        <div className="flex items-center justify-between gap-4 rounded-full border border-brand-dark/10 bg-white/85 px-4 py-2 shadow-sm ring-1 ring-white/50">
+          <a href="#topo" className="flex items-center gap-2" aria-label="Ir para o topo">
+            <StanchiLogo className="h-10 w-auto" />
           </a>
-          <button
-            type="button"
-            onClick={() => setIsOpen((prev) => !prev)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-dark/10 text-brand-primary shadow-sm transition hover:border-brand-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/40 lg:hidden"
-            aria-label={isOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
-            aria-expanded={isOpen}
-            aria-controls="menu-movel"
-          >
-            {isOpen ? <X size={18} /> : <List size={22} />}
-          </button>
+
+          <nav className="hidden items-center gap-1 text-[15px] font-semibold text-brand-dark/90 lg:flex">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-full px-4 py-2 transition-colors hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/40"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="hidden items-center gap-2 whitespace-nowrap rounded-full bg-[#1EB457] px-4 py-2.5 text-base font-semibold text-white shadow-sm transition hover:bg-[#1AA34E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1EB457]/50 md:inline-flex"
+            >
+              <WhatsappLogo size={18} weight="fill" />
+              Falar com especialista
+            </a>
+            <button
+              type="button"
+              onClick={() => setIsOpen((prev) => !prev)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-dark/10 bg-white/90 text-brand-primary shadow-sm transition hover:border-brand-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/40 lg:hidden"
+              aria-label={isOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
+              aria-expanded={isOpen}
+              aria-controls="menu-movel"
+            >
+              {isOpen ? <X size={18} /> : <List size={22} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -72,32 +67,36 @@ export function Header() {
         id="menu-movel"
         className={clsx(
           "lg:hidden",
-          "overflow-hidden border-t border-brand-dark/10 transition-[max-height] duration-300 ease-in-out",
-          isOpen ? "max-h-96" : "max-h-0",
+          "border-t border-brand-dark/10 transition-[max-height] duration-300 ease-in-out",
+          isOpen
+            ? "max-h-[calc(100dvh-4.5rem)] overflow-y-auto"
+            : "max-h-0 overflow-hidden",
         )}
         aria-hidden={!isOpen}
       >
-        <nav className="container-section flex flex-col gap-3 py-4 text-sm font-semibold text-brand-dark/90">
-          {navItems.map((item) => (
+        <div className="container-section pb-5">
+          <nav className="flex flex-col gap-3 rounded-3xl bg-white/95 p-4 text-base font-semibold text-brand-dark/90 shadow-lg shadow-brand-dark/10 ring-1 ring-brand-dark/10">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-2xl bg-brand-surface/80 px-4 py-3.5 shadow-sm ring-1 ring-brand-dark/10 transition hover:bg-brand-light-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/50"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
             <a
-              key={item.href}
-              href={item.href}
-              className="rounded-2xl bg-white/85 px-4 py-3 shadow-sm ring-1 ring-brand-dark/10 transition hover:bg-brand-light-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/50"
-              onClick={() => setIsOpen(false)}
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#1EB457] px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#1AA34E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1EB457]/50"
             >
-              {item.label}
+              <WhatsappLogo size={20} weight="fill" />
+              Falar com especialista
             </a>
-          ))}
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noreferrer"
-            className="flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#1EB457] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1AA34E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1EB457]/50"
-          >
-            <WhatsappLogo size={20} weight="fill" />
-            Falar com especialista
-          </a>
-        </nav>
+          </nav>
+        </div>
       </div>
     </header>
   );

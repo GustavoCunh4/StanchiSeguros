@@ -28,14 +28,14 @@ const partners = [
 export function Partners() {
   return (
     <Section className="bg-section-peach">
-      <div className="container-section space-y-6">
-        <div className="glass-card rounded-3xl bg-white/70 p-6 shadow-sm ring-1 ring-white/50">
+      <div className="container-section space-y-6 sm:space-y-7">
+        <div className="glass-card rounded-3xl bg-white/70 p-6 sm:p-7 shadow-sm ring-1 ring-white/50">
           <SectionHeader
             eyebrow="Principais parceiros"
             title="Trabalhamos com operadoras sólidas e reconhecidas"
             description="Parceiros que entregam rede credenciada robusta, estabilidade e o melhor custo-benefício para cada perfil de beneficiário."
           />
-          <div className="mt-5 rounded-2xl bg-brand-surface/80 p-4 text-sm text-brand-slate/75 ring-1 ring-brand-dark/10">
+          <div className="mt-5 rounded-2xl bg-brand-surface/80 p-5 sm:p-6 text-[15px] sm:text-base text-brand-slate/75 ring-1 ring-brand-dark/10">
             <p>
               Elaboramos comparativos objetivos entre operadoras para que você tenha clareza sobre
               rede credenciada, regras de utilização e diferenciais de cada carteira. A parceria
@@ -44,13 +44,13 @@ export function Partners() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-3xl bg-brand-surface/70 p-4 shadow-sm ring-1 ring-brand-primary/10">
+        <div className="relative overflow-hidden rounded-3xl bg-brand-surface/70 p-4 sm:p-5 shadow-sm ring-1 ring-brand-primary/10">
           <div
-            className="pointer-events-none absolute inset-y-0 left-0 hidden w-16 bg-gradient-to-r from-brand-surface/90 via-brand-surface/60 to-transparent lg:block"
+            className="pointer-events-none absolute inset-y-0 left-0 hidden w-16 sm:w-20 bg-gradient-to-r from-brand-surface/90 via-brand-surface/60 to-transparent lg:block"
             aria-hidden="true"
           />
           <div
-            className="pointer-events-none absolute inset-y-0 right-0 hidden w-16 bg-gradient-to-l from-brand-surface/90 via-brand-surface/60 to-transparent lg:block"
+            className="pointer-events-none absolute inset-y-0 right-0 hidden w-16 sm:w-20 bg-gradient-to-l from-brand-surface/90 via-brand-surface/60 to-transparent lg:block"
             aria-hidden="true"
           />
           <div className="overflow-hidden">
@@ -59,7 +59,7 @@ export function Partners() {
                 {partners.map((partner) => (
                   <div
                     key={partner.name}
-                    className="flex h-16 w-28 items-center justify-center rounded-2xl border border-brand-primary/10 bg-white/90 p-3 shadow-sm"
+                    className="flex h-[72px] w-[120px] items-center justify-center rounded-2xl border border-brand-primary/10 bg-white/90 p-3 shadow-sm sm:h-[80px] sm:w-[136px] sm:p-4 lg:h-[88px] lg:w-[152px]"
                   >
                     <img
                       src={partner.image}
@@ -74,7 +74,7 @@ export function Partners() {
                 {partners.map((partner) => (
                   <div
                     key={`${partner.name}-duplicate`}
-                    className="flex h-16 w-28 items-center justify-center rounded-2xl border border-brand-primary/10 bg-white/90 p-3 shadow-sm"
+                    className="flex h-[72px] w-[120px] items-center justify-center rounded-2xl border border-brand-primary/10 bg-white/90 p-3 shadow-sm sm:h-[80px] sm:w-[136px] sm:p-4 lg:h-[88px] lg:w-[152px]"
                   >
                     <img
                       src={partner.image}
@@ -87,7 +87,7 @@ export function Partners() {
               </div>
             </div>
           </div>
-          <p className="mt-3 text-xs text-brand-slate/70">
+          <p className="mt-3 text-xs sm:text-sm text-brand-slate/70">
             Principais parceiros da Stanchi Seguros.
           </p>
         </div>
@@ -95,3 +95,4 @@ export function Partners() {
     </Section>
   );
 }
+

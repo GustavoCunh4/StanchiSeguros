@@ -15,7 +15,7 @@ export function StanchiLogo({
   return (
     <div
       className={`flex items-center gap-3 ${className ?? ""}`.trim()}
-      aria-label="Logotipo Stanchi Soluo em Seguros"
+      aria-label="Logotipo Stanchi Solução em Seguros"
     >
       <svg viewBox="0 0 72 72" role="img" aria-hidden="true" className="h-14 w-14">
         <defs>
@@ -62,7 +62,7 @@ export function StanchiLogo({
           className="block text-[0.68rem] uppercase tracking-[0.42em]"
           style={{ color: subtitleColor }}
         >
-          soluo em seguros
+          solução em seguros
         </span>
       </div>
     </div>

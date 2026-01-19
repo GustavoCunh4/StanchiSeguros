@@ -54,14 +54,14 @@ export function PlanCategories() {
   return (
     <Section id="plans" className="bg-section-mint">
       <div className="container-section grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-        <div className="glass-card space-y-6 rounded-3xl bg-white/70 p-6 shadow-sm ring-1 ring-white/50">
+        <div className="glass-card space-y-6 rounded-3xl bg-white/70 p-7 shadow-sm ring-1 ring-white/50 sm:p-8">
           <SectionHeader
             eyebrow="Planos sob medida"
             title="Trabalhamos com planos de saúde pensados para você"
             description="Analisamos perfil, faixa etária, rede credenciada desejada e orçamento para recomendar a melhor opção com equilíbrio entre cuidado e economia."
             className="space-y-4"
           />
-          <ul className="space-y-3 text-sm text-brand-slate/75">
+          <ul className="space-y-3 text-[15px] text-brand-slate/75 sm:text-base">
             {[
               "Indicamos operadoras alinhadas ao dia a dia da sua família ou empresa.",
               "Explicamos regras de carência, coparticipação e reajustes antes da assinatura.",
@@ -80,13 +80,13 @@ export function PlanCategories() {
             <MotionFade
               key={title}
               delay={index * 0.04}
-              className="group flex h-full flex-col rounded-2xl border border-brand-dark/10 bg-white/95 p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-primary/30 hover:shadow-card"
+              className="group flex h-full flex-col rounded-2xl border border-brand-dark/10 bg-white/95 p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand-primary/30 hover:shadow-card"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-light/25 text-brand-primary transition group-hover:bg-brand-primary group-hover:text-white">
-                <Icon size={24} weight="duotone" />
+                <Icon size={26} weight="duotone" />
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-brand-dark">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-brand-slate/75">{description}</p>
+              <h3 className="mt-4 text-xl font-semibold text-brand-dark">{title}</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-brand-slate/75 sm:text-base">{description}</p>
             </MotionFade>
           ))}
         </div>
@@ -94,3 +94,4 @@ export function PlanCategories() {
     </Section>
   );
 }
+

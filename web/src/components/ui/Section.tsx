@@ -9,7 +9,7 @@ export function Section({ className, id, ...props }: SectionProps) {
   return (
     <section
       id={id}
-      className={clsx("py-16 sm:py-20", className)}
+      className={clsx("scroll-mt-24 py-16 sm:scroll-mt-28 sm:py-20", className)}
       {...props}
     />
   );

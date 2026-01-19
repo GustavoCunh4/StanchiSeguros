@@ -120,54 +120,54 @@ export function LeadForm({
       onSubmit={handleSubmit(onSubmit)}
       noValidate
       className={clsx(
-        "relative space-y-4 glass-card p-5 shadow-lg shadow-brand-dark/10 ring-1 ring-white/40 sm:p-6",
+        "relative space-y-4 glass-card p-6 shadow-lg shadow-brand-dark/10 ring-1 ring-white/40 sm:p-7",
         cardClassName,
         className,
       )}
     >
       <div className="space-y-1.5">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-accent">
+        <p className="text-[13px] font-semibold uppercase tracking-[0.24em] text-brand-accent sm:text-sm">
           {eyebrow}
         </p>
-        <h2 className="text-lg font-semibold text-brand-dark">{title}</h2>
-        <p className="text-sm text-brand-slate/70">{subtitle}</p>
+        <h2 className="text-xl font-semibold text-brand-dark">{title}</h2>
+        <p className="text-[15px] text-brand-slate/70 sm:text-base">{subtitle}</p>
       </div>
 
       <div className="space-y-3">
-        <label className="space-y-2 text-sm font-semibold text-brand-dark">
+        <label className="space-y-2 text-[15px] font-semibold text-brand-dark sm:text-base">
           Nome completo
           <input
             {...register("name")}
-            className="w-full rounded-xl border border-brand-dark/10 bg-white px-3 py-2.5 text-sm text-brand-dark shadow-sm focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-light/60"
+            className="w-full rounded-xl border border-brand-dark/10 bg-white px-3 py-3 text-[15px] text-brand-dark shadow-sm focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-light/60 sm:text-base"
             placeholder="Digite seu nome"
             autoComplete="name"
             aria-invalid={Boolean(errors.name)}
           />
           {errors.name ? (
-            <span className="block text-xs font-medium text-brand-accent" role="alert">
+            <span className="block text-[13px] font-medium text-brand-accent" role="alert">
               {errors.name.message}
             </span>
           ) : null}
         </label>
 
-        <label className="space-y-2 text-sm font-semibold text-brand-dark">
+        <label className="space-y-2 text-[15px] font-semibold text-brand-dark sm:text-base">
           E-mail
           <input
             {...register("email")}
             type="email"
-            className="w-full rounded-xl border border-brand-dark/10 bg-white px-3 py-2.5 text-sm text-brand-dark shadow-sm focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-light/60"
+            className="w-full rounded-xl border border-brand-dark/10 bg-white px-3 py-3 text-[15px] text-brand-dark shadow-sm focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-light/60 sm:text-base"
             placeholder="nome@email.com"
             autoComplete="email"
             aria-invalid={Boolean(errors.email)}
           />
           {errors.email ? (
-            <span className="block text-xs font-medium text-brand-accent" role="alert">
+            <span className="block text-[13px] font-medium text-brand-accent" role="alert">
               {errors.email.message}
             </span>
           ) : null}
         </label>
 
-        <label className="space-y-2 text-sm font-semibold text-brand-dark">
+        <label className="space-y-2 text-[15px] font-semibold text-brand-dark sm:text-base">
           WhatsApp
           <input
             {...register("phone")}
@@ -177,23 +177,23 @@ export function LeadForm({
                 shouldValidate: true,
               })
             }
-            className="w-full rounded-xl border border-brand-dark/10 bg-white px-3 py-2.5 text-sm text-brand-dark shadow-sm focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-light/60"
+            className="w-full rounded-xl border border-brand-dark/10 bg-white px-3 py-3 text-[15px] text-brand-dark shadow-sm focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-light/60 sm:text-base"
             placeholder="(71) 99999-0000"
             autoComplete="tel"
             aria-invalid={Boolean(errors.phone)}
           />
           {errors.phone ? (
-            <span className="block text-xs font-medium text-brand-accent" role="alert">
+            <span className="block text-[13px] font-medium text-brand-accent" role="alert">
               {errors.phone.message}
             </span>
           ) : null}
         </label>
 
-        <label className="space-y-2 text-sm font-semibold text-brand-dark">
+        <label className="space-y-2 text-[15px] font-semibold text-brand-dark sm:text-base">
           Tipo de plano
           <select
             {...register("product")}
-            className="w-full rounded-xl border border-brand-dark/10 bg-white px-3 py-2.5 text-sm text-brand-dark shadow-sm focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-light/60"
+            className="w-full rounded-xl border border-brand-dark/10 bg-white px-3 py-3 text-[15px] text-brand-dark shadow-sm focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-light/60 sm:text-base"
             aria-invalid={Boolean(errors.product)}
           >
             {products.map((option) => (
@@ -201,24 +201,24 @@ export function LeadForm({
             ))}
           </select>
           {errors.product ? (
-            <span className="block text-xs font-medium text-brand-accent" role="alert">
+            <span className="block text-[13px] font-medium text-brand-accent" role="alert">
               {errors.product.message}
             </span>
           ) : null}
         </label>
 
         {showMessageField ? (
-          <label className="space-y-2 text-sm font-semibold text-brand-dark">
+          <label className="space-y-2 text-[15px] font-semibold text-brand-dark sm:text-base">
             Observações (opcional)
             <textarea
               {...register("message")}
               rows={3}
-              className="w-full rounded-xl border border-brand-dark/10 bg-white px-3 py-2.5 text-sm text-brand-dark shadow-sm focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-light/60"
+              className="w-full rounded-xl border border-brand-dark/10 bg-white px-3 py-3 text-[15px] text-brand-dark shadow-sm focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-light/60 sm:text-base"
               placeholder="Informe detalhes, número de vidas, região ou outras necessidades."
               aria-invalid={Boolean(errors.message)}
             />
             {errors.message ? (
-              <span className="block text-xs font-medium text-brand-accent" role="alert">
+              <span className="block text-[13px] font-medium text-brand-accent" role="alert">
                 {errors.message.message}
               </span>
             ) : null}
@@ -227,7 +227,7 @@ export function LeadForm({
       </div>
 
       <div className="space-y-3">
-        <label className="flex items-start gap-3 rounded-xl bg-brand-light/10 p-4 text-sm text-brand-slate/80">
+        <label className="flex items-start gap-3 rounded-xl bg-brand-light/10 p-5 text-[15px] text-brand-slate/80 sm:text-base">
           <input
             type="checkbox"
             {...register("consent")}
@@ -246,7 +246,7 @@ export function LeadForm({
           </span>
         </label>
         {errors.consent ? (
-          <span className="block text-xs font-medium text-brand-accent" role="alert">
+          <span className="block text-[13px] font-medium text-brand-accent" role="alert">
             {errors.consent.message}
           </span>
         ) : null}
@@ -270,13 +270,14 @@ export function LeadForm({
         variant="primary"
         fullWidth
         disabled={isSubmitting}
-        className={clsx("px-4 py-2.5 text-sm", buttonClassName)}
+        className={clsx("px-5 py-3 text-base", buttonClassName)}
       >
         {buttonIcon}
         {isSubmitting ? buttonSendingLabel : buttonLabel}
       </Button>
 
-      {footerText ? <p className="text-xs text-brand-slate/60">{footerText}</p> : null}
+      {footerText ? <p className="text-sm text-brand-slate/60">{footerText}</p> : null}
     </form>
   );
 }
+
