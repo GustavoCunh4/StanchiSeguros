@@ -17,7 +17,7 @@
   }
 
   body {
-    @apply font-body antialiased text-base leading-relaxed;
+    @apply font-body antialiased text-base leading-relaxed sm:text-[17px];
   }
 
   h1,
@@ -46,15 +46,15 @@
   }
 
   .section-eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.3em] text-brand-primary;
+    @apply text-[13px] font-semibold uppercase tracking-[0.3em] text-brand-primary sm:text-sm;
   }
 
   .section-title {
-    @apply text-[32px] font-semibold leading-tight text-brand-dark sm:text-[38px];
+    @apply text-[clamp(2rem,1.55rem+2.4vw,3rem)] font-semibold leading-tight text-brand-dark;
   }
 
   .section-subtitle {
-    @apply mt-3 text-base leading-relaxed text-brand-slate/80;
+    @apply mt-3 text-[16px] leading-relaxed text-brand-slate/80 sm:text-[17px] lg:text-lg;
   }
 
   .focus-outline {

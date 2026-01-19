@@ -10,13 +10,13 @@ export function NetworksSection() {
   return (
     <Section id="networks" className="bg-section-mint">
       <div className="container-section grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-        <div className="space-y-5">
+        <div className="space-y-6">
           <SectionHeader
             eyebrow="Redes credenciadas"
             title="Escolha o plano com a estrutura ideal para o seu dia a dia"
             description="Antes de contratar, avaliamos clínicas, hospitais, laboratórios, especialidades médicas e profissionais da região onde você mais utiliza o plano. Assim, você garante atendimento próximo e rápido quando precisar."
           />
-          <ul className="space-y-3 text-sm text-brand-slate/80">
+          <ul className="space-y-3 text-[15px] text-brand-slate/80 sm:text-base">
             <li className="flex items-start gap-3">
               <Hospital size={20} weight="fill" className="mt-0.5 text-brand-primary" />
               <span>Hospitais de referência, maternidades e pronto-atendimentos.</span>
@@ -27,12 +27,12 @@ export function NetworksSection() {
             </li>
           </ul>
           <div className="grid gap-3 sm:grid-cols-2">
-            <div className="rounded-2xl border border-brand-primary/20 bg-brand-light/10 p-4 text-sm shadow-sm">
-              <p className="text-2xl font-semibold text-brand-dark">+50</p>
+            <div className="rounded-2xl border border-brand-primary/20 bg-brand-light/10 p-5 text-[15px] shadow-sm sm:text-base">
+              <p className="text-3xl font-semibold text-brand-dark">+50</p>
               <p className="mt-1 text-brand-slate/70">clínicas de diagnóstico parceiras</p>
             </div>
-            <div className="rounded-2xl border border-brand-primary/20 bg-brand-light/10 p-4 text-sm shadow-sm">
-              <p className="text-2xl font-semibold text-brand-dark">12</p>
+            <div className="rounded-2xl border border-brand-primary/20 bg-brand-light/10 p-5 text-[15px] shadow-sm sm:text-base">
+              <p className="text-3xl font-semibold text-brand-dark">12</p>
               <p className="mt-1 text-brand-slate/70">operadoras analisadas antes da indicação</p>
             </div>
           </div>
@@ -46,21 +46,21 @@ export function NetworksSection() {
               className="h-full w-full object-cover"
               loading="lazy"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/85 to-transparent p-4 text-white">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/70">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/85 to-transparent p-5 text-white">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.28em] text-white/70 sm:text-xs">
                 120+ hospitais parceiros
               </p>
-              <p className="text-base font-semibold">Cobertura regional e nacional</p>
-              <span className="mt-2 inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
+              <p className="text-lg font-semibold">Cobertura regional e nacional</p>
+              <span className="mt-2 inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1.5 text-[12px] font-semibold uppercase tracking-wide text-white">
                 Atendimento 24h
               </span>
             </div>
           </div>
-          <div className="glass-card rounded-3xl border border-white/60 bg-brand-surface/80 p-6 shadow-sm">
-            <h3 className="text-lg font-semibold text-brand-dark">
+          <div className="glass-card rounded-3xl border border-white/60 bg-brand-surface/80 p-7 shadow-sm">
+            <h3 className="text-xl font-semibold text-brand-dark">
               Receba a lista completa de redes credenciadas
             </h3>
-            <p className="mt-2 text-sm text-brand-slate/75">
+            <p className="mt-2 text-[15px] text-brand-slate/75 sm:text-base">
               Indicamos as redes que fazem sentido para o seu perfil e apresentamos alternativas
               quando a operadora atual não atende à necessidade.
             </p>
@@ -68,7 +68,7 @@ export function NetworksSection() {
               href={whatsappLink}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#1EB457] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1AA34E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1EB457]/50"
+              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#1EB457] px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#1AA34E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1EB457]/50"
             >
               <WhatsappLogo size={18} weight="fill" />
               Receber redes credenciadas
@@ -79,3 +79,4 @@ export function NetworksSection() {
     </Section>
   );
 }
+

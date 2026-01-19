@@ -58,27 +58,6 @@ export function PrivacySection() {
           </article>
         </div>
 
-        <div className="glass-card rounded-2xl border border-dashed border-brand-primary/40 bg-white/70 p-5 text-sm leading-relaxed text-brand-slate/80">
-          <p>
-            Utilizamos cookies apenas para registrar sua escolha de consentimento (LGPD). Esse
-            registro é salvo no seu navegador e serve para não exibir novamente o aviso de cookies.
-            Para dúvidas sobre privacidade, entre em contato pelo e-mail{" "}
-            <a
-              href="mailto:comercial@stanchiseguros.com.br"
-              className="font-semibold text-brand-primary underline-offset-2 hover:underline"
-            >
-              comercial@stanchiseguros.com.br
-            </a>{" "}
-            ou telefone{" "}
-            <a
-              href="tel:5571999485006"
-              className="font-semibold text-brand-primary underline-offset-2 hover:underline"
-            >
-              71 99948-5006
-            </a>
-            .
-          </p>
-        </div>
       </div>
     </Section>
   );

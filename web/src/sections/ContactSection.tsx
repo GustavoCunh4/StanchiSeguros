@@ -16,16 +16,16 @@ const products = [
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-section-cream py-14 sm:py-18">
+    <section id="contact" className="bg-section-cream py-16 sm:py-20 scroll-mt-24 sm:scroll-mt-28">
       <div className="container-section grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-        <div className="rounded-3xl border border-brand-primary/15 bg-brand-soft p-6 shadow-sm sm:p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-primary">
+        <div className="rounded-3xl border border-brand-primary/15 bg-brand-soft p-7 shadow-sm sm:p-8">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.28em] text-brand-primary sm:text-sm">
             Vamos conversar
           </p>
-          <h2 className="mt-3 text-[2rem] font-semibold text-brand-dark sm:text-[2.2rem]">
+          <h2 className="mt-3 text-[2.2rem] font-semibold text-brand-dark sm:text-[2.6rem]">
             Entre em contato para obter uma cotação personalizada
           </h2>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-brand-slate/80 sm:text-base">
+          <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-brand-slate/80 sm:text-base lg:text-lg">
             Nossas especialistas vão orientar você ou sua empresa na contratação do plano de saúde
             ideal, com suporte antes e depois da assinatura do contrato.
           </p>
@@ -35,21 +35,21 @@ export function ContactSection() {
               href={whatsappLink}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-[#1EB457] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1AA34E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1EB457]/70"
+              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-[#1EB457] px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#1AA34E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1EB457]/70"
             >
               <WhatsappLogo size={18} weight="fill" />
               Solicitar cotação
             </a>
             <a
               href="tel:5571999485006"
-              className="inline-flex items-center gap-2 rounded-full border border-brand-primary px-5 py-2.5 text-sm font-semibold text-brand-primary transition hover:bg-brand-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/50"
+              className="inline-flex items-center gap-2 rounded-full border border-brand-primary px-6 py-3 text-base font-semibold text-brand-primary transition hover:bg-brand-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/50"
             >
               <PhoneCall size={18} weight="bold" />
               Ligar para 71 99948-5006
             </a>
           </div>
 
-          <p className="mt-5 flex items-center gap-2 text-xs text-brand-slate/70 sm:text-sm">
+          <p className="mt-5 flex items-center gap-2 text-sm text-brand-slate/70">
             <ArrowRight size={16} weight="bold" className="text-brand-primary" />
             Atendimento online ou presencial, conforme a sua preferência.
           </p>
@@ -75,3 +75,4 @@ export function ContactSection() {
     </section>
   );
 }
+

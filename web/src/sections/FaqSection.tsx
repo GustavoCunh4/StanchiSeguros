@@ -79,14 +79,14 @@ function FaqItem({
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="rounded-2xl border border-brand-primary/15 bg-white/95 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-brand-primary/40">
+    <div className="rounded-2xl border border-brand-primary/15 bg-white/95 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-brand-primary/40">
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex w-full items-center justify-between gap-3 text-left"
         aria-expanded={isOpen}
       >
-        <span className="text-base font-semibold text-brand-dark">{question}</span>
+        <span className="text-lg font-semibold text-brand-dark">{question}</span>
         <CaretDown
           size={20}
           className={`text-brand-primary transition-transform ${isOpen ? "rotate-180" : ""}`}
@@ -99,7 +99,7 @@ function FaqItem({
         }`}
       >
         <div className="overflow-hidden">
-          <p className="mt-3 text-sm leading-relaxed text-brand-slate/80">{answer}</p>
+          <p className="mt-3 text-[15px] leading-relaxed text-brand-slate/80 sm:text-base">{answer}</p>
         </div>
       </div>
     </div>
@@ -127,10 +127,10 @@ export function FaqSection() {
                   loading="lazy"
                 />
                 <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/85 to-transparent px-5 pb-5 pt-12 text-white">
-                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/70">
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.28em] text-white/70 sm:text-xs">
                     Atendimento humano
                   </p>
-                  <p className="text-base font-semibold">Consultoras dedicadas em cada etapa</p>
+                  <p className="text-lg font-semibold">Consultoras dedicadas em cada etapa</p>
                 </figcaption>
               </figure>
 
@@ -142,23 +142,23 @@ export function FaqSection() {
                     className="h-full w-full object-cover"
                     loading="lazy"
                   />
-                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/80 to-transparent px-4 py-3 text-xs font-semibold text-white">
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/80 to-transparent px-4 py-3 text-[12px] font-semibold text-white sm:text-xs">
                     98% dos clientes indicam a Stanchi
                   </figcaption>
                 </figure>
 
-                <div className="glass-card rounded-2xl border border-white/50 bg-white/75 p-4 shadow-sm">
-                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-primary">
+                <div className="glass-card rounded-2xl border border-white/50 bg-white/75 p-5 shadow-sm">
+                  <p className="text-[13px] font-semibold uppercase tracking-[0.28em] text-brand-primary sm:text-sm">
                     Suporte completo
                   </p>
-                  <ul className="mt-3 space-y-2 text-sm text-brand-slate/80">
+                  <ul className="mt-3 space-y-2 text-[15px] text-brand-slate/80 sm:text-base">
                     {[
                       "Guiamos a contratação do início ao pós-venda.",
                       "Avaliamos coberturas, rede credenciada e reajustes.",
                       "Você fala com especialistas por WhatsApp ou presencialmente.",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-2">
-                        <CheckCircle size={16} weight="fill" className="mt-0.5 text-brand-primary" />
+                        <CheckCircle size={18} weight="fill" className="mt-0.5 text-brand-primary" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -178,3 +178,4 @@ export function FaqSection() {
     </Section>
   );
 }
+

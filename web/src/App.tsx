@@ -2,7 +2,6 @@ import { Seo } from "./components/Seo";
 
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { Footer } from "./components/Footer";
-import { CookieConsent } from "./components/CookieConsent";
 import { Header } from "./components/Header";
 import { AboutSection } from "./sections/AboutSection";
 import { ContactSection } from "./sections/ContactSection";
@@ -43,7 +42,6 @@ function App() {
         </main>
         <Footer />
         <FloatingWhatsApp />
-        <CookieConsent />
       </div>
     </>
   );

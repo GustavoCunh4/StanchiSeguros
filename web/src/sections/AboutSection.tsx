@@ -9,35 +9,35 @@ const stats = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="bg-section-cream py-14 sm:py-18">
+    <section id="about" className="bg-section-cream py-16 sm:py-20 scroll-mt-24 sm:scroll-mt-28">
       <div className="container-section grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div className="space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-primary">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.28em] text-brand-primary sm:text-sm">
             Quem somos
           </p>
-          <h2 className="text-[2rem] font-semibold leading-tight text-brand-dark sm:text-[2.2rem]">
+          <h2 className="text-[2.2rem] font-semibold leading-tight text-brand-dark sm:text-[2.6rem]">
             Nossa missão: conhecer bem para cuidar
           </h2>
-          <p className="text-sm leading-relaxed text-brand-slate/80 sm:text-base">
+          <p className="text-[15px] leading-relaxed text-brand-slate/80 sm:text-base lg:text-lg">
             A Stanchi Seguros nasceu em 2018 com mais de 15 anos de experiência acumulada em
             diferentes ramos de seguros, com foco em planos de saúde. Somos uma empresa liderada por
             mulheres e movida pela atenção aos detalhes que fazem diferença na vida das pessoas.
           </p>
-          <p className="text-sm leading-relaxed text-brand-slate/80 sm:text-base">
+          <p className="text-[15px] leading-relaxed text-brand-slate/80 sm:text-base lg:text-lg">
             Oferecemos atendimento consultivo e humanizado, colocando clientes no centro de todas
             as decisões. Ética, responsabilidade e excelência técnica nos guiam em cada proposta.
           </p>
 
-          <dl className="grid gap-3 pt-1 text-sm sm:grid-cols-2">
+          <dl className="grid gap-3 pt-2 text-[15px] sm:grid-cols-2 sm:text-base">
             {stats.map((item) => (
               <div
                 key={item.label}
-                className="rounded-2xl border border-brand-dark/10 bg-white/95 p-4 text-brand-dark shadow-sm"
+                className="rounded-2xl border border-brand-dark/10 bg-white/95 p-5 text-brand-dark shadow-sm"
               >
                 <dt className="text-xs font-semibold uppercase tracking-wide text-brand-primary">
                   {item.label}
                 </dt>
-                <dd className="mt-1 text-xl font-semibold">{item.value}</dd>
+                <dd className="mt-1 text-2xl font-semibold">{item.value}</dd>
               </div>
             ))}
           </dl>
@@ -72,10 +72,10 @@ export function AboutSection() {
                   aria-hidden="true"
                 />
                 <div className="relative flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary">
                     <ShieldCheck size={22} weight="fill" />
                   </div>
-                  <p className="text-sm leading-relaxed text-brand-dark">
+                  <p className="text-[15px] leading-relaxed text-brand-dark sm:text-base">
                     Cuidamos de famílias, idosos e empresas com planos pensados para garantir
                     segurança, acesso a clínicas de referência e suporte contínuo.
                   </p>
@@ -88,3 +88,4 @@ export function AboutSection() {
     </section>
   );
 }
+
